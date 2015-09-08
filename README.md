@@ -1,15 +1,15 @@
-# GridfsStorage
+# gridfs-storage-engine
 
-GridfsStorage is a Multer Storage Engine implementation for Gridfs (MongoDB)
+gridfs-storage-engine is a Multer Storage Engine implementation for Gridfs (MongoDB)
 
 ## How does it work
 
-At the moment, GridfsStorage streams a file to mongodb using grind-stream.
+At the moment, gridfs-storage-engine streams a file to mongodb using grind-stream.
 
 Following the [Multer Storage Engine](https://github.com/expressjs/multer/blob/master/StorageEngine.md) pattern, to use this Storage engine you will need to initialize it with multer. 
 
 ```
-var storage = require('GridfsStorage.js')();
+var storage = require('gridfs-storage-engine.js')();
 var upload = multer({ storage: storage });
 ```
 
@@ -24,7 +24,7 @@ Any key/value body elements a part from the file, will be added as the file meta
 
 ### Options
 
-By default GridfsStorage will try to open a database connection with the following details
+By default gridfs-storage-engine will try to open a database connection with the following details
 
 ```
 {
@@ -37,7 +37,7 @@ By default GridfsStorage will try to open a database connection with the followi
 You can overwrite those by providing as parameters of the require.
 
 ```
-var storage = require('GridfsStorage.js')({
+var storage = require('gridfs-storage-engine.js')({
     database: 'yourDatabase'
 });
 var upload = multer({ storage: storage });
