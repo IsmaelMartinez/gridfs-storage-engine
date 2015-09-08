@@ -1,0 +1,25 @@
+{
+  "name": "GridfsStorage",
+  "version": "1.0.0",
+  "description": "GridfsStorage engine for Multer",
+  "main": "lib/GridfsStorage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ISMAELMARTINEZ/GridfsStorage.git"
+  },
+  "keywords": [
+    "gridfs",
+    "storage",
+    "multer",
+    "engine"
+  ],
+  "author": "Ismael Martinez Ramos <ismaelmartinez@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ISMAELMARTINEZ/GridfsStorage/issues"
+  },
+  "homepage": "https://github.com/ISMAELMARTINEZ/GridfsStorage"
+}
