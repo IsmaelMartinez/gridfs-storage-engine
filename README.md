@@ -6,7 +6,7 @@ It allows you to stream files from your form or nodejs application into your mon
 
 ## How does it work
 
-gridfs-storage-engine streams a file or, group of files, to mongodb using grind-stream.
+gridfs-storage-engine streams a file or group of files to mongodb using grind-stream.
 
 Following the [Multer Storage Engine](https://github.com/expressjs/multer/blob/master/StorageEngine.md) pattern, to use this Storage engine you will need to initialize it with multer. 
 
