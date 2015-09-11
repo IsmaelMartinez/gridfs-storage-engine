@@ -24,6 +24,10 @@ router.post('/api/v1/uploadFiles', upload.multiple('files'), function () { //wha
 
 Any key/value body elements a part from the file, will be added as the file metadata.
 
+If there is no connection on initialization, the system will throw an exception. 
+
+You can catch the error and retry to reconnect using the function connectToMongoDB 
+
 ### Options
 
 By default, gridfs-storage-engine will try to open a database connection with the following details
@@ -32,7 +36,8 @@ By default, gridfs-storage-engine will try to open a database connection with th
 {
     database: 'test',
     hostname: '127.0.0.1',
-    port: 27017
+    port: 27017,
+    url: undefined
 }
 ```
 
@@ -44,6 +49,8 @@ var storage = require('gridfs-storage-engine')({
 });
 var upload = multer({ storage: storage });
 ```
+
+You can use the normal url parameter to connect to a mongoDB database like ```mongodb://localhost:27017/test```. This is the prefered method.
 
 If you need to submit files using nodejs check [form-data](https://www.npmjs.com/package/form-data).
 
