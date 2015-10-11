@@ -8,7 +8,7 @@ It allows you to stream files from your form or nodejs application into your mon
 
 gridfs-storage-engine streams a file or group of files to mongodb using grind-stream.
 
-Following the [Multer Storage Engine](https://github.com/expressjs/multer/blob/master/StorageEngine.md) pattern, to use this Storage engine you will need to initialize it with multer. 
+Following the [Multer Storage Engine](https://github.com/expressjs/multer/blob/master/StorageEngine.md) pattern, to use this Storage engine you will need to initialize it with multer.
 
 ```
 var storage = require('gridfs-storage-engine')();
@@ -19,14 +19,14 @@ Then you could activate it for the end points that you choose
 
 ```
 router.post('/api/v1/uploadFile/', upload.single('file'), function () { //what next } );
-router.post('/api/v1/uploadFiles', upload.multiple('files'), function () { //what next });
+router.post('/api/v1/uploadFiles', upload.array('files'), function () { //what next });
 ```
 
 Any key/value body elements a part from the file, will be added as the file metadata.
 
-If there is no connection on initialization, the system will throw an exception. 
+If there is no connection on initialization, the system will throw an exception.
 
-You can catch the error and retry to reconnect using the function connectToMongoDB 
+You can catch the error and retry to reconnect using the function connectToMongoDB
 
 ### Options
 
