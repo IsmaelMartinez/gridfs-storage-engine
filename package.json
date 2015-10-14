@@ -1,6 +1,6 @@
 {
   "name": "gridfs-storage-engine",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "gridfs-storage-engine for Multer",
   "main": "lib/GridfsStorage.js",
   "scripts": {
