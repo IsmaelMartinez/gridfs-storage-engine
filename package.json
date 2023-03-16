@@ -24,7 +24,7 @@
   "homepage": "https://github.com/ISMAELMARTINEZ/gridfs-storage-engine",
   "dependencies": {
     "gridfs-stream": "^1.1.1",
-    "mongodb": "^3.0.0",
+    "mongodb": "^5.0.0",
     "underscore": "^1.8.3"
   }
 }
